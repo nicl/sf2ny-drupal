@@ -33,7 +33,7 @@
 
 /* Downsize the brand/project name a bit */
 .navbar .brand {
-    padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+    padding: 18px 20px 16px; /* Increase vertical padding to match navbar links */
     font-size: 16px;
     font-weight: bold;
     text-shadow: 0 -1px 0 rgba(0,0,0,.5);
@@ -60,6 +60,7 @@ body {
 /*    background-image: url("/img/col-du-galibier.jpg");
     background-position: center top;
     background-repeat: no-repeat;*/
+    padding-top: 80px;
 }
 
 article {
@@ -91,33 +92,25 @@ section h1 {
  ---------------------------------------------------------------------------- */
 
  header {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
  }
 
  /* MAIN SPLASH
  ---------------------------------------------------------------------------- */
 
 .splash {
-    width: 100%;
-    overflow: hidden;
     position: relative;
 }
 
 .splash-image {
-    position: absolute;
-    left: 50%;
-    margin-left: -750px;
-    z-index: -3;
-    width: 1500px;
-    max-width: none;
+    width: 100%;
 }
 
  .splash-caption {
-    margin-top: 220px;
     max-width: 100%;
-    padding: 5px;
-    position: static;
-    text-align: center;
+    padding: 5px 20px;
+    position: absolute;
+    bottom: 10px;
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -205,4 +198,58 @@ ul#countdown  p.timeRef {
 
  hr {
     clear: both;
+ }
+
+ /* MISC
+ -----------------------------------------------------------------------------*/
+
+ .main-container {
+    margin-top: 15px;
+ }
+
+ .page-header {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    font-size: 38.5px;
+ }
+
+ header h2 {
+    margin-top: 0;
+ }
+
+/* #block-twitter-block-1 {
+    margin: 0 auto;
+    max-width: 500px;
+ }*/
+
+ #block-twitter-block-1 h2 {
+    display: none;
+ }
+
+ #block-views-charities-block img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+ }
+
+ #block-views-charities-block h2 {
+    border-top: 1px solid #eeeeee;
+    margin-top: 20px;
+    padding-top: 10px;
+ }
+
+ .submitted {
+    display: block;
+ }
+
+ .field-name-field-tags .field-item {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+ }
+
+ ul.links li {
+    padding-left: 0;
  }

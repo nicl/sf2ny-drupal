@@ -243,7 +243,7 @@ function twitter_block_custom_block_form($edit = array()) {
     '#type' => 'select',
     '#title' => t('Tweet limit'),
     '#default_value' => $edit['tweet_limit'],
-    '#options' => drupal_map_assoc(range(1, 20)),
+    '#options' => drupal_map_assoc(range(0, 20)),
     '#description' => t('Fix the size of a timeline to a preset number of Tweets between 1 and 20. The timeline will render the specified number of Tweets from the timeline, expanding the height of the widget to display all Tweets without scrolling. Since the widget is of a fixed size, it will not poll for updates when using this option.'),
   );
   $form['size'] = array(
@@ -362,7 +362,7 @@ function twitter_block_block_view($delta) {
   // Load the configuration.
   $config = twitter_block_block_get($delta);
 
-  // Unserialize the timeline 
+  // Unserialize the timeline
   $data = unserialize($config['data']);
 
   $block = array();
@@ -379,7 +379,7 @@ function twitter_block_block_view($delta) {
         'data-link-color' => !empty($data['link_color']) ? '#' . $data['link_color'] : $data['link_color'],
         'width' => $data['width'],
         'height' => $data['height'],
-        'data-chrome' => !empty($data['chrome']) ? implode(' ', array_keys($data['chrome'])) : $data['chrome'],
+        'data-chrome' => !empty($data['chrome']) ? implode(' ', array_values(array_diff($data['chrome'], array(0)))) : $data['chrome'],
         'data-border-color' => !empty($data['border_color']) ? '#' . $data['border_color'] : $data['border_color'],
         'lang' => $data['language'],
         'data-tweet-limit' => $data['tweet_limit'],

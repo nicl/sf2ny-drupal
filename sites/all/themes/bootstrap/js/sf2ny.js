@@ -14,6 +14,7 @@
             $.extend(settings, options);
         }
 
+        function countdown_proc() {
             var eventDate = Date.parse(settings.date);
             var currentDate = Math.floor($.now());
 
@@ -53,9 +54,11 @@
 
     };
 
-    $('#countdown').countdown({
-        date: "19 august 2013 17:00:00",
-        format: true
+    $(document).ready(function(){
+        $('#countdown').countdown({
+            date: "19 august 2013 17:00:00",
+            format: true
+        });
     });
 
 }) (jQuery);

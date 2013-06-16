@@ -40,7 +40,10 @@
 
 <div class="splash container">
     <img class="splash-image" src="<?php print $base_path; ?>sites/all/themes/bootstrap/img/col-du-galibier.jpg">
-    <div class="splash-caption"><h1 class="page-header"><?php print $title; ?></h1></div>
+    <div class="splash-caption">
+      <h1 class="page-header">35 days, 3,150 miles, 2 cyclists, 1 challenge.</h1>
+      <p class="lead">To cycle from San Francisco to New York.</p>
+    </div>
 </div>
 
 <div class="main-container container">
@@ -54,7 +57,29 @@
   </header> <!-- /#header -->
 
   <div class="row-fluid">
+    <div class="countdown text-success">
+      <ul id="countdown">
+        <li>
+          <span class="days">00</span>
+          <p class="timeRef">days</p>
+        </li>
+        <li>
+          <span class="hours">00</span>
+          <p class="timeRef">hours</p>
+        </li>
+        <li>
+          <span class="minutes">00</span>
+          <p class="timeRef">minutes</p>
+        </li>
+        <li>
+          <span class="seconds">00</span>
+          <p class="timeRef">seconds</p>
+        </li>
+      </ul>
+    </div>
+  </div>
 
+  <div class="row-fluid">
     <section class="span12">
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
